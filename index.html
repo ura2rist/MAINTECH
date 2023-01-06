@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MAINTECH</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1e229576-1b02-4a35-a8e1-f79eef408d53&lang=ru_RU"></script>
+  <script defer="defer" src="script/main.js"></script><link href="css/style.css" rel="stylesheet"></head>
+  <body class="body">
+<header class="header">
+  <div class="wrapper header__wrapper">
+    <a href="/" class="logo header__logo">
+      <img src="data:image/png;base64,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" alt="Логотип МЭИНТЕХ" class="logo__img">
+    </a>
+    <nav class="header__navigate">
+      <ul class="header__list">
+        <li class="header__element"><a href="#" class="header__link link">Главная</a></li>
+        <li class="header__element"><a href="#" class="header__link link">Деятельность</a></li>
+        <li class="header__element"><a href="#" class="header__link link">Новости</a></li>
+        <li class="header__element"><a href="#" class="header__link link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="humburger">
+      <span class="humburger__line"></span>
+      <span class="humburger__line"></span>
+      <span class="humburger__line"></span>
+    </div>
+  </div>
+</header>
+<main class="main">
+<section class="banner">
+  <div class="wrapper banner__wrapper">
+    <div class="banner__content">
+      <h1 class="banner__title">Производство деталей из металла</h1>
+      <p class="banner__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, accusantium? Veniam impedit eligendi, quas natus porro ea, dolorem ex possimus quod saepe vel, facilis dolor cupiditate! Quam voluptas corrupti non?</p>
+      <div class="banner__button-wrapper">
+        <a href="tel:+7(499)288-85-01" class="banner__phone">+7 (499) 288-85-01</a>
+        <a href="#message" class="banner__message">Отправить письмо</a>
+      </div>
+    </div>
+    <div class="banner__img-wrapper">
+      <img src="image/main_img.24ce484a.png" alt="Картинка деталей" class="banner__img">
+    </div>
+    <ul class="banner__postal">
+      <li class="banner__postal-element">
+        <div class="banner__postal-wrapper">
+          Текст Текст Текст
+        </div>
+      </li>
+      <li class="banner__postal-element">
+        <div class="banner__postal-wrapper">
+          Текст Текст Текст
+        </div>
+      </li>
+      <li class="banner__postal-element">
+        <div class="banner__postal-wrapper">
+          Текст Текст Текст
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="services">
+  <div class="wrapper services__wrapper">
+    <h2 class="title">Мэин Тех</h2>
+    <div class="services__content">
+      <p class="services__content-text"><span class="services__content-title">Московское производство металлических изделий</span><span class="services__content-description">— мы производим ...Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст</span></p>
+    </div>
+    <ul class="services__list">
+      <li class="services__element">
+        <div class="services__list-wrapper">
+          <h3 class="services__list-title">Металлические изделия</h3>
+          <p class="services__list-description">Текст Текст Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+          <p class="services__list-description">Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+        </div>
+      </li>
+      <li class="services__element">
+        <div class="services__list-wrapper">
+          <h3 class="services__list-title">3д печать</h3>
+          <p class="services__list-description">Текст Текст Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+          <p class="services__list-description">Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+          <p class="services__list-description">Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+        </div>
+      </li>
+      <li class="services__element">
+        <div class="services__list-wrapper">
+          <h3 class="services__list-title">Обработка дерева</h3>
+          <p class="services__list-description">Текст Текст Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+          <p class="services__list-description">Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+          <p class="services__list-description">Текст ТекстТекст </p>
+          <p class="services__list-description">Текст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+          <p class="services__list-description">Текст ТекстТекст ТекстТекст ТекстТекст Текст</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="news-slider">
+  <div class="wrapper">
+    <h2 class="title">Новости</h2>
+    <div class="swiper news-slider__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide news-slider__swiper-slide">
+          <div class="news-slider__slide-wrapper">
+            <h3 class="news-slider__title"><span class="news-slider__date">29 декабря 2022</span><span class="news-slider__time">12:00</span></h3>
+            <p class="news-slider__text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+            <a href="#" class="news-slider__slide-link"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news-slider__slide-wrapper">
+            <h3 class="news-slider__title"><span class="news-slider__date">29 декабря 2022</span><span class="news-slider__time">12:00</span></h3>
+            <p class="news-slider__text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+            <a href="#" class="news-slider__slide-link"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news-slider__slide-wrapper">
+            <h3 class="news-slider__title"><span class="news-slider__date">29 декабря 2022</span><span class="news-slider__time">12:00</span></h3>
+            <p class="news-slider__text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+            <a href="#" class="news-slider__slide-link"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news-slider__slide-wrapper">
+            <h3 class="news-slider__title"><span class="news-slider__date">29 декабря 2022</span><span class="news-slider__time">12:00</span></h3>
+            <p class="news-slider__text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+            <a href="#" class="news-slider__slide-link"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news-slider__slide-wrapper">
+            <h3 class="news-slider__title"><span class="news-slider__date">29 декабря 2022</span><span class="news-slider__time">12:00</span></h3>
+            <p class="news-slider__text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+            <a href="#" class="news-slider__slide-link"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news-slider__slide-wrapper">
+            <h3 class="news-slider__title"><span class="news-slider__date">29 декабря 2022</span><span class="news-slider__time">12:00</span></h3>
+            <p class="news-slider__text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+            <a href="#" class="news-slider__slide-link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="types">
+  <div class="wrapper">
+    <h2 class="title">Виды работ</h2>
+    <ul class="types__content">
+      <li class="types__element">
+        <div class="types__element-wrapper">
+          <h3 class="types__element-title">Текст ТекстТекст</h3>
+          <p class="types__element-text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст </p>
+          <p class="types__element-text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+        </div>
+      </li>
+      <li class="types__element">
+        <div class="types__element-wrapper">
+          <h3 class="types__element-title">Текст ТекстТекст</h3>
+          <p class="types__element-text">Текст ТекстТекстТекст </p>
+          <p class="types__element-text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+        </div>
+      </li>
+      <li class="types__element">
+        <div class="types__element-wrapper">
+          <h3 class="types__element-title">Текст ТекстТекст</h3>
+          <p class="types__element-text">Текст ТекстТекстТекст </p>
+          <p class="types__element-text">Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="content">
+  <div class="wrapper content__wrapper">
+    <h2 class="title">Текст ТекстТекст</h2>
+    <ul class="content__list">
+      <li class="content__element">
+        <div class="content__element-wrapper">
+          <p>Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+        </div>
+      </li>
+      <li class="content__element">
+        <div class="content__element-wrapper">
+          <p>Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+        </div>
+      </li>
+      <li class="content__element">
+        <div class="content__element-wrapper">
+          <p>Текст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекстТекст ТекстТекст</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section id="message" class="message">
+  <div class="wrapper">
+    <h2 class="title message__title">Остались вопросы?</h2>
+    <form action="#" class="message__form form">
+      <div class="form__input-wrapper form__required">
+        <input type="text" placeholder="Имя" class="form__input form__only-text">
+      </div>
+      <div class="form__input-wrapper form__required">
+        <input type="text" placeholder="Телефон" class="form__input" data-phone-pattern>
+      </div>
+      <p class="form__message message__required-wrapper">* поля, обязательные для заполнения</p>
+      <div class="form__input-wrapper message__form-text form__required">
+        <textarea class="form__input form__textarea" placeholder="Сообщение"></textarea>
+      </div>
+      <button type="submit" class="form__submit form__submit-dark message__submit">Отправить</button>
+    </form>
+  </div>
+</section>
+<section class="contact">
+  <div class="wrapper contact__wrapper">
+    <div class="contact__content">
+      <h2 class="title">Контакты</h2>
+      <ul class="contact__list">
+        <li class="contant__element">
+          <h3 class="contact__title">Телефон</h3>
+          <p class="contact__description">+7 (499) 000-00-00</p>
+        </li>
+        <li class="contant__element">
+          <h3 class="contact__title">E-mail</h3>
+          <p class="contact__description">mt@maintech.su</p>
+        </li>
+        <li class="contant__element">
+          <h3 class="contact__title">Пресс-центр</h3>
+          <p class="contact__description">+7 (499) 000-00-00</p>
+          <p class="contact__description">press@moscow-export.ru</p>
+        </li>
+        <li class="contant__element">
+          <h3 class="contact__title">Адрес</h3>
+          <p class="contact__description">109028, Россия, Москва, улица 33333</p>
+        </li>
+      </ul>
+    </div>
+    <div class="contact__map" id="map-1"> 
+
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <ul class="footer__list">
+          <li class="footer__element"><a href="" class="footer__link link">Новости</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">Партнерам</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">Производственные мощности</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">Обработка дерева</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">Обработка металла</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">3д печать</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">Официальные документы</a></li>
+          <li class="footer__element"><a href="" class="footer__link link">Партнеры</a></li>
+        </ul>
+        <ul class="footer__contacts">
+          <li class="footer__contact">+7 (499) 000-00-00</li>
+          <li class="footer__contact">info@maintech.su</li>
+          <li class="footer__contact">123128, Россия, Москва, улица, 13</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
